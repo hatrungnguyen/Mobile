@@ -44,7 +44,7 @@
                     android:id="@+id/profile_greeting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hello Chó Trung"
+                    android:text="Hello User"
                     android:textColor="@color/white"
                     android:textSize="16dp" />
 
