@@ -49,7 +49,7 @@
                     android:textSize="16dp" />
 
                 <TextView
-                    android:id="@+id/search_question"
+                    android:id="@+id/profile_question"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Which flight do you want to search?"
@@ -70,7 +70,7 @@
                     android:id="@+id/gmail_icon"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:padding="10dp"
+
                     android:src="@drawable/gmail" />
 
             </com.google.android.material.card.MaterialCardView>
@@ -139,6 +139,13 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/flightnumber_info_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#45C3C3C3"
+                    app:strokeWidth="0dp">
                 <LinearLayout
                     android:id="@+id/flight_detail"
                     android:layout_width="392dp"
@@ -164,7 +171,15 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/date_info_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#45C3C3C3"
+                    app:strokeWidth="0dp">
                 <LinearLayout
                     android:id="@+id/flight_date_info"
                     android:layout_width="391dp"
@@ -190,6 +205,7 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/search_flight_button"
