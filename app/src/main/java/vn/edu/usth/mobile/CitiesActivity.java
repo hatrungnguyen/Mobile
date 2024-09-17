@@ -29,6 +29,5 @@ public class CitiesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }
