@@ -21,13 +21,13 @@ public class CitiesActivity extends AppCompatActivity {
             }
         });
 
-        MaterialButton searchFlightButton = findViewById(R.id.search_flight_button);
-        searchFlightButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CitiesActivity.this, FlightDetailActivity.class);
-                startActivity(intent);
-            }
-        });
+//        MaterialButton searchFlightButton = findViewById(R.id.search_flight_button);
+//        searchFlightButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(CitiesActivity.this, FlightDetailActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

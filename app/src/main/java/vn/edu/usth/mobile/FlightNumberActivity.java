@@ -39,6 +39,15 @@ public class FlightNumberActivity extends AppCompatActivity {
             }
         });
 
+        MaterialButton searchFlightButton = findViewById(R.id.search_flight_button);
+        searchFlightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FlightNumberActivity.this, FlightDetailActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 }
