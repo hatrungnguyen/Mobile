@@ -29,7 +29,7 @@
             android:exported="false"
             android:theme="@style/Theme.Mobile" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.Mobile">
             <intent-filter>
