@@ -8,23 +8,25 @@
 
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/top_background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-62dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="143dp"
-        android:layout_height="108dp"
+        android:id="@+id/top_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintHeight_percent="0.4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/profile"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_background"/>
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="143dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile" />
 
     <TextView
         android:id="@+id/tv1"
@@ -35,21 +37,23 @@
         android:textColor="@color/dark_background"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        tools:layout_editor_absoluteY="145dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        android:layout_marginTop="16dp" />
+
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/user_information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="92dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/tv1"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="1dp">
 
         <LinearLayout
+            android:id="@+id/DoB"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -75,6 +79,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -100,6 +105,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -125,6 +131,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/phone_number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
