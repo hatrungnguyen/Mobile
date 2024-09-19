@@ -22,6 +22,14 @@ public class FlightDetailActivity extends AppCompatActivity {
                 finish();
             }
         });
+        ImageView profileIcon = findViewById(R.id.profile_icon);
+        profileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FlightDetailActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
