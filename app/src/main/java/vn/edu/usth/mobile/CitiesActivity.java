@@ -22,7 +22,7 @@ public class CitiesActivity extends AppCompatActivity {
             }
         });
 
-        ImageView profileIcon = findViewById(R.id.profile_image);
+        ImageView profileIcon = findViewById(R.id.profile_icon);
         profileIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

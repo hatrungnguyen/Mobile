@@ -20,22 +20,17 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile);
-        
-        // Add OnClickListener to the profile icon
-        ImageView profileIcon = findViewById(R.id.profile_icon);
-        profileIcon.setOnClickListener(new View.OnClickListener() {
+        ImageView homeIcon = findViewById(R.id.home_icon);
+        homeIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Change this to navigate to the desired activity
-                Intent intent = new Intent(ProfileActivity.this, FlightByCityActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, CitiesActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(intent);
+                finish();
             }
         });
+        
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 }
