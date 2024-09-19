@@ -48,6 +48,15 @@ public class FlightNumberActivity extends AppCompatActivity {
             }
         });
 
+        ImageView profileIcon = findViewById(R.id.profile_icon);
+        profileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FlightNumberActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 }

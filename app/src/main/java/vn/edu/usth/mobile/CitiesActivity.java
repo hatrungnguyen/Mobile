@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.view.View;
 import com.google.android.material.button.MaterialButton;
+import android.widget.ImageView;
 
 public class CitiesActivity extends AppCompatActivity {
     @Override
@@ -21,6 +22,15 @@ public class CitiesActivity extends AppCompatActivity {
             }
         });
 
+        ImageView profileIcon = findViewById(R.id.profile_image);
+        profileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CitiesActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
         MaterialButton searchFlightButton = findViewById(R.id.search_flight_button);
         searchFlightButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,3 +41,5 @@ public class CitiesActivity extends AppCompatActivity {
         });
     }
 }
+
+
