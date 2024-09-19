@@ -9,13 +9,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity{
     private EditText usernameEditText, passwordEditText;
     private Button loginButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         usernameEditText = findViewById(R.id.username);
         passwordEditText = findViewById(R.id.password);
         loginButton = findViewById(R.id.login_button);
@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity{
             String username = usernameEditText.getText().toString();
             String password = passwordEditText.getText().toString();
             if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(MainActivity.this, "Please enter both username and password", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Please enter both username and password", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(MainActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
             }
 
-            Intent intent = new Intent(MainActivity.this, CitiesActivity.class);
+            Intent intent = new Intent(LoginActivity.this, CitiesActivity.class);
             intent.putExtra("username", usernameEditText.getText().toString().trim());
             startActivity(intent);
         }
